@@ -1,0 +1,36 @@
+{
+  "name": "lezchik-library",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/lautaro-lezchik"
+  },
+  "version": "1.0.0",
+  "description": "Tree Shaking Test Library",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "rollup": "rollup -c"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lautaro-lezchik/LezchikLibrary.git"
+  },
+  "author": "Lautaro Lezchik",
+  "license": "ISC",
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^25.0.5",
+    "@rollup/plugin-node-resolve": "^15.2.2",
+    "@rollup/plugin-typescript": "^11.1.5",
+    "@types/react": "^18.2.25",
+    "react": "^18.2.0",
+    "rollup": "^3.29.4",
+    "rollup-plugin-dts": "^6.0.2",
+    "tslib": "^2.6.2",
+    "typescript": "^5.2.2"
+  },
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "files": [
+    "dist"
+  ],
+  "types": "dist/index.d.ts"
+}
