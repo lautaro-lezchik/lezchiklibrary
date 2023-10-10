@@ -1,14 +1,18 @@
 {
   "name": "@lautaro-lezchik/lezchiklibrary",
+  "sourceMap": true,
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/lautaro-lezchik"
   },
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "Tree Shaking Test Library",
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "rollup": "rollup -c"
+    "rollup": "rollup -c",
+    "build": "webpack --config webpack.config.cjs",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "repository": {
     "type": "git",
@@ -17,15 +21,32 @@
   "author": "Lautaro Lezchik",
   "license": "ISC",
   "devDependencies": {
+    "@babel/preset-env": "^7.22.20",
+    "@babel/preset-react": "^7.22.15",
+    "@babel/preset-typescript": "^7.23.0",
     "@rollup/plugin-commonjs": "^25.0.5",
     "@rollup/plugin-node-resolve": "^15.2.2",
     "@rollup/plugin-typescript": "^11.1.5",
+    "@storybook/addon-essentials": "^7.4.6",
+    "@storybook/addon-interactions": "^7.4.6",
+    "@storybook/addon-links": "^7.4.6",
+    "@storybook/addon-onboarding": "^1.0.8",
+    "@storybook/blocks": "^7.4.6",
+    "@storybook/react": "^7.4.6",
+    "@storybook/react-webpack5": "^7.4.6",
+    "@storybook/testing-library": "^0.2.2",
     "@types/react": "^18.2.25",
     "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "rollup": "^3.29.4",
     "rollup-plugin-dts": "^6.0.2",
+    "source-map-loader": "^4.0.1",
+    "storybook": "^7.4.6",
     "tslib": "^2.6.2",
-    "typescript": "^5.2.2"
+    "typescript": "^5.2.2",
+    "webpack": "^5.88.2",
+    "webpack-bundle-analyzer": "^4.9.1",
+    "webpack-cli": "^5.1.4"
   },
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
